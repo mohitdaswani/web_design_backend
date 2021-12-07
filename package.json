@@ -4,8 +4,7 @@
   "description": "NETFLIX",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Mohit Daswani",
   "proxy": "http://localhost:3000",
