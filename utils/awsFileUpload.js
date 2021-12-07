@@ -14,6 +14,7 @@ const AWSSignedUrl = async (file) => {
       ContentType: mimetype,
       ACL: "public-read",
     };
+"SAda";
     await s3bucket.upload(params, async function (err, data) {
       if (err) {
         console.log(err);
