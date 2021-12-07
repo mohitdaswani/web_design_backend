@@ -10,6 +10,9 @@
   "author": "Web Project",
   "proxy": "http://localhost:3000",
   "license": "MIT",
+  "engines": {
+    "node": "14.17.0"
+  },
   "dependencies": {
     "aws-sdk": "^2.729.0",
     "axios": "^0.24.0",
