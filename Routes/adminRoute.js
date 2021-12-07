@@ -27,7 +27,7 @@ router.post(
   ]),
   post.add_movie
 );
-// router.patch("/admin/editProducts/:productId",patch.edit_product)
-// router.delete("/admin/deleteProduct/:productId",patch.delete_product)
+router.patch("/admin/editProducts/:productId");
+router.delete("/admin/deleteProduct/:productId");
 router.delete("/admin/logout", delete1.logout_admin);
 module.exports = router;
