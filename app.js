@@ -21,12 +21,20 @@ app.use(
 );
 
 const userRoute = require('./Routes/userRoute')
+<<<<<<< HEAD
 const adminRoute = require("./Routes/adminRoute")
+=======
+const adminRoute = require("./Routes/adminRoute");
+>>>>>>> db0751048ed5e3ab05c2a79d2d0976a747f54e97
 // const movieRoute = require("./Routes/moviesRoute")
 // const subscriptionRoute=require("./Routes/SubscriptionRoute")
 
 app.use(userRoute)
+<<<<<<< HEAD
 app.use(adminRoute)
+=======
+app.use(adminRoute);
+>>>>>>> db0751048ed5e3ab05c2a79d2d0976a747f54e97
 // app.use(movieRoute)
 // app.use(subscriptionRoute)
 
