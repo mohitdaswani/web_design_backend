@@ -2,19 +2,14 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "movies",
-"main": "index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "author": "Web Project",
   "proxy": "http://localhost:3000",
   "license": "MIT",
-  "engines": {
-    "node": "14.17.0",
-    "npm":"8.2.0"
-  },
   "dependencies": {
     "aws-sdk": "^2.729.0",
     "axios": "^0.24.0",
