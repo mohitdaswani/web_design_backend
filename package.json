@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "movies",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "client-install": "cd client && install-client",
     "start": "node server.js"
