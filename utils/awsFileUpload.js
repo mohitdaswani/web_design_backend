@@ -8,7 +8,7 @@ const AWSSignedUrl = async (file) => {
     AWS.config.update(config);
     let s3bucket = new AWS.S3();
     var params = {
-      Bucket: "mynetflixclone",
+      Bucket: "web-design-project",
       Key: `${fieldname}/${originalname}`,
       Body: buffer,
       ContentType: mimetype,
