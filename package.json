@@ -4,7 +4,6 @@
   "description": "movies",
   "main": "server.js",
   "scripts": {
-    "client-install": "cd client && install-client",
     "start": "node server.js"
   },
   "author": "Web Project",
@@ -34,13 +33,5 @@
     "randomstring": "^1.1.5",
     "razorpay": "^2.0.6"
   },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mohitdaswani/web_design_backend.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mohitdaswani/web_design_backend/issues"
-  },
-  "homepage": "https://github.com/mohitdaswani/web_design_backend#readme"
+  "devDependencies": {}
 }
