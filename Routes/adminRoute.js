@@ -1,4 +1,4 @@
-const { get, post, put, delete1 } = require("../controllers/AdminController");
+const { get, post, put, delete1 } = require("../Controller/AdminController");
 const { Router } = require("express");
 //requiring and setting up multer
 // const upload = require("../utils/multer")
