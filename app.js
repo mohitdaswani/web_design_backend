@@ -42,7 +42,7 @@ const handleSend = (req, res) => {
     .catch(error => res.json({ error }));
 };
 app.get("/", (req, res) => {
-  res.send("asda");
+  res.send("edfsa");
 });
 app.post("/send", handleSend);
 dotenv.config();
