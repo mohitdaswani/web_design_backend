@@ -1,7 +1,7 @@
 const AWS = require("aws-sdk");
 const fs = require("fs");
 const config=require("../awsConfig.json")
-const { AWSAccesskey, AWSPassword, AWSDomain } = process.env;
+const {  AWSDomain } = process.env;
 const AWSSignedUrl = async (file) => {
   try {
     const { mimetype, originalname, buffer, fieldname } = file;
