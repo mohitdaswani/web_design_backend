@@ -64,8 +64,8 @@ module.exports = {
           let subject = `Welcome to Netflix`;
           let html = `<h2>Thanks for Joining Us</h2>
                         <h3>Dear ${name} you are one step closer to become one of our prestigious family</h3>
-                        <p>To verify your email Click <a href=https://localhost:5555/user/verify/${token} >here</a></p>
-                        <p>https://localhost:5555/user/verify/${token}</p>           
+                        <p>To verify your email Click <a href=https://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
+                        <p>https://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
                                   <p>Thank you!!!!</p>`;
 
           email1(email, subject, html); //////////////////////function to send email to the user
@@ -114,8 +114,8 @@ module.exports = {
                            display: inline-block;
                            font-size: 16px;
                            margin: 4px 2px;
-                           cursor: pointer;"><a href=https://localhost:5555/user/forgot_password/${resetToken}>Reset My Password</a></button>
-                           <p>copy paste this link to your browser:- https://localhost:5555/user/forgot_password/${resetToken}</p> 
+                           cursor: pointer;"><a href=https://powerful-tor-09724.herokuapp.com/forgot_password/${resetToken}>Reset My Password</a></button>
+                           <p>copy paste this link to your browser:- https://powerful-tor-09724.herokuapp.com/forgot_password/${resetToken}</p> 
                            <p style="color:red;">If you did not forgot your password you can safely ignore this email.</p>
                            <p>Thank you</p>`;
             email1(user[0].email, subject, html);
@@ -135,8 +135,8 @@ module.exports = {
       try {
         const { id, name, email, accessToken } = req.body;
         const currentuser = await users.find({ facebookid: id });
-        console.log(currentuser)
-        if (currentuser.length>0) {
+        console.log(currentuser);
+        if (currentuser.length > 0) {
           let token = await currentuser[0].generateToken();
           res.status(201).json({
             statusCode: 201,
@@ -177,8 +177,8 @@ module.exports = {
       try {
         const { profile, accessToken } = req.body;
         const currentuser = await users.find({ googleid: profile.googleId });
-        if (currentuser.length>0) {
-          console.log(currentuser)
+        if (currentuser.length > 0) {
+          console.log(currentuser);
           let token = await currentuser[0].generateToken();
           res.status(201).json({
             statusCode: 201,
