@@ -1,6 +1,6 @@
 const users = require("../models/user");
 const { sign } = require("jsonwebtoken");
-const { get, post, put, delete1 } = require("../Controller/userController");
+const { get, post, put, delete1 } = require("../controllers/userController");
 const { Router } = require("express");
 const router = Router();
 const authentication = require("../middlewares/authentication");
