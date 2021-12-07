@@ -4,6 +4,7 @@
   "description": "movies",
   "main": "index.js",
   "scripts": {
+    "client-install": "cd client && install-client",
     "start": "node server.js"
   },
   "author": "Web Project",
