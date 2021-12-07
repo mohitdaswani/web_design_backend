@@ -12,7 +12,8 @@
   "proxy": "http://localhost:3000",
   "license": "MIT",
   "engines": {
-    "node": "14.17.0"
+    "node": "14.17.0",
+    "npm":"8.2.0"
   },
   "dependencies": {
     "aws-sdk": "^2.729.0",
