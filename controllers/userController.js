@@ -106,15 +106,6 @@ module.exports = {
             let subject = `Password Reset`;
             let html = `<h2>Netflix</h2>
                            <h3>Dear ${user[0].name}, Seems like you forgot your password for Netflix account. if this is true, click below to reset your password.</h3>
-                           <button style="background-color: #338DFF; /* blue */
-                           border: none;
-                           color: white;
-                           text-align: center;
-                           text-decoration: none;
-                           display: inline-block;
-                           font-size: 16px;
-                           margin: 4px 2px;
-                           cursor: pointer;"><a href=https://powerful-tor-09724.herokuapp.com/forgot_password/${resetToken}>Reset My Password</a></button>
                            <p>copy paste this link to your browser:- https://powerful-tor-09724.herokuapp.com/forgot_password/${resetToken}</p> 
                            <p style="color:red;">If you did not forgot your password you can safely ignore this email.</p>
                            <p>Thank you</p>`;
