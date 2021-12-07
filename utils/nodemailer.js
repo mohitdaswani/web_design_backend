@@ -26,7 +26,7 @@ verify();
 
 let send_mail = async (email, subject, html) => {
   let status = await transport.sendMail({
-    from: `powerful-tor-09724.herokuapp.com`,
+    from: `surajattainu159@gmail.com`,
     to: email,
     subject: subject,
     html: html,
