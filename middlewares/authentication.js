@@ -7,7 +7,7 @@ module.exports = async (req, res, next) => {
       if (user) {
         if (user[0].verified_email == true) {
           req.user = user[0];
-        } else return res.json("kindly verify your email first");
+        } else return res.json("kindly verify your email Please");
       }
     } else return res.json({ statusCode: 400, message: "kindly login first" });
     next();
