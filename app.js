@@ -41,7 +41,9 @@ const handleSend = (req, res) => {
     .then(google_response => res.json({ google_response }))
     .catch(error => res.json({ error }));
 };
-
+app.get("/", (req, res) => {
+  res.send("asda");
+});
 app.post("/send", handleSend);
 dotenv.config();
 require("./db");
