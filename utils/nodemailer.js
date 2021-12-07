@@ -5,7 +5,7 @@ dotenv.config();
 let transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 465,
-  secure: false,
+  secure: true,
   debug: process.env.NODE_ENV === "develop",
   auth: {
     user: process.env.GMAIL_EMAIL,
@@ -26,7 +26,7 @@ verify();
 
 let send_mail = async (email, subject, html) => {
   let status = await transport.sendMail({
-    from: `dummyprojectuser@gmail.com`,
+    from: `powerful-tor-09724.herokuapp.com`,
     to: email,
     subject: subject,
     html: html,
