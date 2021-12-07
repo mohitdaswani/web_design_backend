@@ -61,11 +61,11 @@ module.exports = {
           const NewUser = await users.create(user);
           NewUser.resetToken = null;
           token = await NewUser.generateToken();
-          let subject = `Welcome to Netflix`;
+          let subject = `Welcome to Movies`;
           let html = `<h2>Thanks for Joining Us</h2>
                         <h3>Dear ${name} you are one step closer to become one of our prestigious family</h3>
-                        <p>To verify your email Click <a href=https://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
-                        <p>https://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
+                        <p>To verify your email Click <a href=http://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
+                        <p>http://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
                                   <p>Thank you!!!!</p>`;
 
           email1(email, subject, html); //////////////////////function to send email to the user
@@ -104,10 +104,10 @@ module.exports = {
           } else {
             const resetToken = await users.generate_reset_token(user);
             let subject = `Password Reset`;
-          let html = `<h2>Thanks for Joining Us</h2>
+            let html = `<h2>Thanks for Joining Us</h2>
                         <h3>Dear ${name} you are one step closer to become one of our prestigious family</h3>
-                        <p>To verify your email Click <a href=https://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
-                        <p>https://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
+                        <p>To verify your email Click <a href=http://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
+                        <p>http://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
                                   <p>Thank you!!!!</p>`;
             email1(user[0].email, subject, html);
             res.status(200).json({
