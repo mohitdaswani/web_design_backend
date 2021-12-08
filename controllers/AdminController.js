@@ -24,15 +24,20 @@ module.exports = {
       }
     },
     // -------------------products added by admin
+    //the below function uploads the pictures to Amazon S3 and takes the signed url and puts it in mongodb
     async add_movie(req, res) {
       try {
         console.log("uploadinig started");
         const posterImage = await AWSsignedUrl(req.files.posterImage[0]);
+        console.log("uploadinig started1");
         const backgroundImage = await AWSsignedUrl(
           req.files.backgroundImage[0]
         );
+        console.log("uploadinig started2");
         const movie = await AWSsignedUrl(req.files.movie[0]);
+        console.log("uploadinig started3",movie);
         const genre = await JSON.parse(req.body.genre);
+        console.log("uploadinig started4");
         const obj = {
           posterImage,
           movie,
