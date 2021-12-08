@@ -12,23 +12,9 @@ const apiLimiter = rateLimit({
 app.use(apiLimiter);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "*",
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true,
-//   })
-// );
-    app.use(function (req, res, next) {
-    //Enabling CORS
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-client-key, x-client-token, x-client-secret, Authorization");
-      next();
-    });
+app.use(cors());
+app.options("*", cors());
 
-  next();
-// });
 
 const userRoute = require('./Routes/userRoute')
 
