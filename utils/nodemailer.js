@@ -27,22 +27,23 @@ let verify = async () => {
 verify();
 
 let send_mail = async (email, subject, html) => {
-  let status = await transport.sendMail(
-    {
-      from: "surajattainu159@gmail.com",
-      to: email,
-      subject: subject,
-      html: html,
-    },
-    function (error, info) {
-      console.log("error : " + JSON.stringify(error));
-      console.log("info : " + JSON.stringify(info));
+    try {
+      let status = await transport.sendMail(
+        {
+          from: "surajattainu159@gmail.com",
+          to: email,
+          subject: subject,
+          html: html,
+        },
+        function (error, info) {
+          console.log("error : " + JSON.stringify(error));
+          console.log("info : " + JSON.stringify(info));
+        }
+      );
+
+      console.log("fds", status);
+    } catch (err) {
+      console.log("ere", err);
     }
-  );
-  try {
-    console.log("fds", status);
-  } catch (err) {
-    console.log("ere", err);
-  }
 };
 module.exports = send_mail;
