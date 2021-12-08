@@ -17,7 +17,6 @@ let verify = async () => {
   try {
     let status = await transport.verify();
     //true is printing don't know why should be removed?????
-    console.log(status);;;;
   } catch (err) {
     console.log(err);
   }
@@ -25,12 +24,18 @@ let verify = async () => {
 verify();
 
 let send_mail = async (email, subject, html) => {
-  let status = await transport.sendMail({
-    from: `surajattainu159@gmail.com`,
-    to: email,
-    subject: subject,
-    html: html,
-  });
+  let status = await transport.sendMail(
+    {
+      from: `surajattainu159@gmail.com`,
+      to: email,
+      subject: subject,
+      html: html,
+    },
+    function (error, info) {
+      console.log("error : " + JSON.stringify(error));
+      console.log("info : " + JSON.stringify(info));
+    }
+  );
   try {
     console.log(status);
   } catch (err) {
