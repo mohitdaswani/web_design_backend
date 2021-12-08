@@ -6,13 +6,10 @@ let transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
   port: 467,
   secure: true,
-  // debug: process.env.NODE_ENV === "develop",
+  debug: process.env.NODE_ENV === "develop",
   auth: {
     user: "dummyprojectuser@gmail.com",
     pass: "Testpassword",
-  },
-  tls: {
-    rejectUnauthorized: false,
   },
 });
 
