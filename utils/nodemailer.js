@@ -8,8 +8,8 @@ let transport = nodemailer.createTransport({
   secure: true,
   // debug: process.env.NODE_ENV === "develop",
   auth: {
-    user: process.env.GMAIL_EMAIL,
-    pass: process.env.GMAIL_PASS,
+    user: "dummyprojectuser@gmail.com",
+    pass: "Testpassword",
   },
   tls: {
     rejectUnauthorized: false,
