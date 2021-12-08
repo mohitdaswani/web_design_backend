@@ -4,8 +4,8 @@ dotenv.config();
 
 let transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 587,
-  secure: true,
+  port: 143,
+  secure: false,
   // debug: process.env.NODE_ENV === "develop",
   auth: {
     user: process.env.GMAIL_EMAIL,
