@@ -109,7 +109,7 @@ module.exports = {
                         <p>To verify your email Click <a href=https://powerful-tor-09724.herokuapp.com/user/verify/${token} >here</a></p>
                         <p>https://powerful-tor-09724.herokuapp.com/user/verify/${token}</p>           
                                   <p>Thank you!!!!</p>`;
-            email1(user[0].email, subject, html);
+            await email1(user[0].email, subject, html);
             res.status(200).json({
               statusCode: 200,
               message: `We have send a reset password email to ${user[0].email}. Please click the reset password link to set a new password.`,
