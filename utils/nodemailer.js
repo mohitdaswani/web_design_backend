@@ -11,6 +11,9 @@ let transport = nodemailer.createTransport({
     user: process.env.GMAIL_EMAIL,
     pass: process.env.GMAIL_PASS,
   },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
 let verify = async () => {
