@@ -22,12 +22,12 @@ app.use(
 
 const userRoute = require('./Routes/userRoute')
 const adminRoute = require("./Routes/adminRoute");
-// const movieRoute = require("./Routes/moviesRoute")
+const movieRoute = require("./Routes/moviesRoute")
 // const subscriptionRoute=require("./Routes/SubscriptionRoute")
 
 app.use(userRoute)
 app.use(adminRoute);
-// app.use(movieRoute)
+app.use(movieRoute)
 // app.use(subscriptionRoute)
 
 const handleSend = (req, res) => {
