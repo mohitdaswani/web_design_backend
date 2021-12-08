@@ -18,7 +18,7 @@ module.exports = {
         const { type, price } = req.body;
         let options = {
           amount: (price * 100).toString(), // amount in the smallest currency unit
-          currency: "INR",
+          currency: "USD",
           receipt: randomstring.generate(7),
           payment_capture: 1,
         };
