@@ -4,7 +4,7 @@ dotenv.config();
 
 let transport = nodemailer.createTransport({
   host: "smtp.gmail.com",
-  port: 143,
+  port: 587,
   secure: false,
   // debug: process.env.NODE_ENV === "develop",
   auth: {
@@ -26,7 +26,7 @@ verify();
 let send_mail = async (email, subject, html) => {
   let status = await transport.sendMail(
     {
-      from: `surajattainu159@gmail.com`,
+      from: "surajattainu159@gmail.com",
       to: email,
       subject: subject,
       html: html,
