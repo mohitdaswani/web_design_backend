@@ -27,7 +27,12 @@ router.post(
   ]),
   post.add_movie
 );
-router.patch("/admin/editProducts/:productId");
-router.delete("/admin/deleteProduct/:productId");
+console.log("Im here");
+//router.put("/admin/editMovie",put.edit_movie);
+try{router.delete("/admin/deleteMovie", delete1.delete_movie);}
+catch(err){
+  console.log("I dont know why");
+}
+
 router.delete("/admin/logout", delete1.logout_admin);
 module.exports = router;
