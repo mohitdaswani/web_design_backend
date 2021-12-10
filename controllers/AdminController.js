@@ -79,6 +79,13 @@ module.exports = {
       }
     },
   },
+  // get: {
+  //   async getAllMovies(req, res) {
+  //     console.log("inside getAllMovies");
+  //     const allMovies = await movieSchema.find_all();
+  //     res.json({ statusCode: 200, movies: allMovies });
+  //   },
+  // },
   put:{
     async edit_movie(req,res){
       try{

@@ -33,6 +33,11 @@ movieSchema.statics.delete_movie = async MovieName => {
     console.log(err.message);
   }
 };
+movieSchema.statics.find_all= async function(){
+  console.log("inside fina_all");
+ const allmovies= await movies1.find();
+ return allmovies;
+};
 
 const movies1 = mongoose.model("movies", movieSchema);
 
