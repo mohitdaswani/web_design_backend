@@ -27,17 +27,17 @@ module.exports = {
     //the below function uploads the pictures to Amazon S3 and takes the signed url and puts it in mongodb
     async add_movie(req, res) {
       try {
-        console.log("uploadinig started");
+        console.log("uploading started");
         const posterImage = await AWSsignedUrl(req.files.posterImage[0]);
-        console.log("uploadinig started1");
+
         const backgroundImage = await AWSsignedUrl(
           req.files.backgroundImage[0]
         );
-        console.log("uploadinig started2");
+
         const movie = await AWSsignedUrl(req.files.movie[0]);
         console.log("uploadinig started3",movie);
         const genre = await JSON.parse(req.body.genre);
-        console.log("uploadinig started4");
+
         const obj = {
           posterImage,
           movie,
@@ -65,5 +65,60 @@ module.exports = {
         res.status(500).send("server error");
       }
     },
+    async delete_movie(req,res){
+      try{
+        console.log("deleting started");
+        movieName= req.body.MovieName;
+          const mov=await movieSchema.delete_movie(movieName);
+          res.json(mov)
+
+      }
+      catch (err) {
+        console.log(err.message);
+        res.status(500).send("server error");
+      }
+    },
   },
+  put:{
+    async edit_movie(req,res){
+      try{
+        movieName= req.body.MovieName;
+          const mov=await movies.delete_movie(movieName);
+          res.json(mov)
+
+      }
+      catch (err) {
+        console.log(err.message);
+        res.status(500).send("server error");
+      }
+      try {
+        console.log("uploading started");
+        const posterImage = await AWSsignedUrl(req.files.posterImage[0]);
+
+        const backgroundImage = await AWSsignedUrl(
+          req.files.backgroundImage[0]
+        );
+
+        const movie = await AWSsignedUrl(req.files.movie[0]);
+        console.log("uploadinig started3",movie);
+        const genre = await JSON.parse(req.body.genre);
+
+        const obj = {
+          posterImage,
+          movie,
+          backgroundImage,
+          ...req.body,
+          genre,
+        };
+        const newMovie = await movieSchema.create(obj);
+        await newMovie.save();
+        res.json({ statusCode: 201, newMovie });
+      } catch (err) {
+        console.log(err);
+        res.send("serverError");
+      }
+     
+    },
+    }
+  
 };

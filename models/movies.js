@@ -22,6 +22,18 @@ let movieSchema = new Schema(
   },
   { timestamps: true }
 );
+movieSchema.statics.delete_movie = async MovieName => {
+  try {
+    console.log("inside delete_movie");
+    const mov = await movies1.findOneAndDelete({ MovieName:MovieName });
+   // mov.MovieName = null;
+    mov.save();
+    return movies1;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
+
 const movies1 = mongoose.model("movies", movieSchema);
 
 module.exports = movies1;
