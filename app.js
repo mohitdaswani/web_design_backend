@@ -13,7 +13,6 @@ app.use(apiLimiter);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
-app.options("*", cors());
 
 
 const userRoute = require('./Routes/userRoute')
