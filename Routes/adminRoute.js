@@ -29,6 +29,11 @@ router.post(
 );
 console.log("Im here");
 //router.put("/admin/editMovie",put.edit_movie);
+try{router.get("admin/getAll",get.getAllMovies);}
+catch(err)
+{
+  console.log(err);
+}
 try{router.delete("/admin/deleteMovie", delete1.delete_movie);}
 catch(err){
   console.log("I dont know why");

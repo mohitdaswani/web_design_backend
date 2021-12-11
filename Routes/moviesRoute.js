@@ -9,6 +9,7 @@ router.get(
   authentication,
   get.fetchNetflixOriginalMovies
 );
+router.get("/movies/all", get.getAllMovies);
 router.get("/movies/topRated", authentication, get.fetchTopRatedMovies);
 router.get("/movies/TrendingMovies", authentication, get.fetchTrendingMovies);
 router.get("/movies/:genres", authentication, get.getMovieByGenre);
